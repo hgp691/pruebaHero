@@ -26,6 +26,7 @@
 		C49B44D62181025E00A72F68 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44D52181025E00A72F68 /* VenueCellViewModel.swift */; };
 		C49B44D92181030A00A72F68 /* VenuePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44D82181030A00A72F68 /* VenuePhoto.swift */; };
 		C49B44DB218121F100A72F68 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44DA218121F100A72F68 /* LocationAnnotation.swift */; };
+		D67E276321817FF300BE184C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67E276221817FF300BE184C /* Main.storyboard */; };
 		D69B0D75217C2E3400AB39EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D74217C2E3400AB39EA /* AppDelegate.swift */; };
 		D69B0D7C217C2E3600AB39EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69B0D7B217C2E3600AB39EA /* Assets.xcassets */; };
 		D69B0D7F217C2E3600AB39EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69B0D7D217C2E3600AB39EA /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		C49B44D52181025E00A72F68 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
 		C49B44D82181030A00A72F68 /* VenuePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePhoto.swift; sourceTree = "<group>"; };
 		C49B44DA218121F100A72F68 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		D67E276221817FF300BE184C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D69B0D71217C2E3400AB39EA /* pruebaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69B0D74217C2E3400AB39EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69B0D7B217C2E3600AB39EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				D69B0D74217C2E3400AB39EA /* AppDelegate.swift */,
 				D69B0D7B217C2E3600AB39EA /* Assets.xcassets */,
 				D69B0D7D217C2E3600AB39EA /* LaunchScreen.storyboard */,
+				D67E276221817FF300BE184C /* Main.storyboard */,
 				D69B0D80217C2E3600AB39EA /* Info.plist */,
 				D69B0D9921801E3000AB39EA /* Navigation.swift */,
 				D69B0D9B21801F8000AB39EA /* TabBarViewController.swift */,
@@ -280,6 +283,7 @@
 				D69B0D7F217C2E3600AB39EA /* LaunchScreen.storyboard in Resources */,
 				C49B44D32181019D00A72F68 /* VenueCell.xib in Resources */,
 				D69B0D7C217C2E3600AB39EA /* Assets.xcassets in Resources */,
+				D67E276321817FF300BE184C /* Main.storyboard in Resources */,
 				C49B44BB2180CB2300A72F68 /* Map.storyboard in Resources */,
 				C49B44B72180CAC400A72F68 /* Table.storyboard in Resources */,
 			);

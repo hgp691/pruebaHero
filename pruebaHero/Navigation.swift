@@ -26,10 +26,6 @@ class Navigation{
             }
         }
         
-        if LocationService.shared.authorized == false{
-            LocationService.shared.configureLocationService()
-        }
-        
     }
     
     func showTabBar(){

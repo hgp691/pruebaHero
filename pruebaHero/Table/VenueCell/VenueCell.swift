@@ -14,6 +14,7 @@ class VenueCell: UITableViewCell {
     @IBOutlet weak var direccion: UILabel!
     @IBOutlet weak var icono: UIImageView!
     @IBOutlet weak var categoria: UIImageView!
+    @IBOutlet weak var distancia: UILabel!
     
     var venueCellViewModel: VenueCellViewModel!
         
@@ -35,14 +36,16 @@ class VenueCell: UITableViewCell {
         self.direccion.text = self.venueCellViewModel.direccion
         self.icono.image = self.venueCellViewModel.icono
         self.selectionStyle = .none
+        self.distancia.text = "\(self.venueCellViewModel.distance!)m"
         
-        self.venueCellViewModel.cargarIcono(completion: {[weak self] in
+        
+        self.venueCellViewModel.loadIcon(completion: {[weak self] in
             DispatchQueue.main.async {
                 self?.icono.image = self?.venueCellViewModel.icono
             }
         })
         
-        self.venueCellViewModel.cargarIconoCategoria {[weak self] (cargo) in
+        self.venueCellViewModel.loadCategoryIcon {[weak self] (cargo) in
             
             print("Cargo: Icono")
             
@@ -52,6 +55,10 @@ class VenueCell: UITableViewCell {
                     self?.categoria.image = self?.venueCellViewModel.iconoCategoria
                 }
             }
+        }
+        
+        self.venueCellViewModel.updateLocation = {[weak self] (valor) in
+            self?.distancia.text = "\(valor)m"
         }
         
     }

@@ -18,21 +18,20 @@ class TableViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationLocationError), name: Notification.Name(LocationMessages.LOCATION_UPDATE_AUTH_ERROR.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.changeStatus), name: Notification.Name(LocationMessages.LOCATION_UPDATE_AUTH.rawValue), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updatedLocation), name: Notification.Name(LocationMessages.LOCATION_UPDATE.rawValue), object: nil)
-        
-        if LocationService.shared.available == false{
-            LocationService.shared.configureLocationService()
-        }
-        
         self.venuesViewModel = VenuesViewModel()
         
-        self.title = "List"
-
         self.table.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "VenueCell")
         self.table.delegate = self
         self.table.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationLocationError), name: Notification.Name(LocationMessages.LOCATION_UPDATE_AUTH_ERROR.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.firstUpdateLocation(notification:)), name: Notification.Name(LocationMessages.FIRST_LOCATION_UPDATE.rawValue), object: nil)
+        
+        LocationService.shared.configureLocationService()
+        
+        self.title = "List"
+
+        
  
     }
     
@@ -55,6 +54,7 @@ extension TableViewController: UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection \((self.venuesViewModel?.venues.count)!)")
         return (self.venuesViewModel?.venues.count)!
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,7 +72,7 @@ extension TableViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
+        //print("selected")
     }
     
 }
@@ -81,24 +81,19 @@ extension TableViewController: UITableViewDelegate{
 
 extension TableViewController{
     
-    override func changeStatus(notification: Notification) {
-        
-    }
-    
-    override func updatedLocation(norification: Notification) {
-        
-        print("Updated location notification")
+    @objc func firstUpdateLocation(notification: Notification){
+        print("FIRST Location updated")
         
         self.venuesViewModel?.initialLoad(completion: {[weak self] (error) in
-            if error != nil{
-                print("Error: \(String(describing: error?.localizedDescription))")
-            }else{
+            if error == nil{
                 DispatchQueue.main.async {
-                    print("count: \(self?.venuesViewModel?.venues.count)")
-                    self?.table.reloadData()
+                    if (self?.venuesViewModel?.venues.count)! > 0{
+                        self?.table.reloadData()
+                    }
                 }
             }
         })
+        
     }
     
 }
@@ -122,7 +117,7 @@ extension UIViewController{
                     
                     if UIApplication.shared.canOpenURL(settingsUrl) {
                         UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                            print("Settings are opened: \(success)")
+                            //print("Settings are opened: \(success)")
                         })
                     }
                     
@@ -133,14 +128,6 @@ extension UIViewController{
                 self?.present(alertAction, animated: true, completion: nil)
             }
         }
-    }
-    
-    @objc func changeStatus(notification: Notification)->Void{
-        
-    }
-    
-    @objc func updatedLocation(norification: Notification)->Void{
-        
     }
     
 }
