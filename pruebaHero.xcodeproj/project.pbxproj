@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C49B44B32180C98F00A72F68 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44B22180C98F00A72F68 /* Theme.swift */; };
+		C49B44B72180CAC400A72F68 /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49B44B62180CAC400A72F68 /* Table.storyboard */; };
+		C49B44B92180CAEE00A72F68 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44B82180CAEE00A72F68 /* TableViewController.swift */; };
+		C49B44BB2180CB2300A72F68 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49B44BA2180CB2300A72F68 /* Map.storyboard */; };
+		C49B44BD2180CB3400A72F68 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44BC2180CB3400A72F68 /* MapViewController.swift */; };
+		C49B44BF2180EFCA00A72F68 /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44BE2180EFCA00A72F68 /* RuntimeError.swift */; };
+		C49B44C12180F87500A72F68 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44C02180F87500A72F68 /* NetworkService.swift */; };
+		C49B44C42180FAB900A72F68 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44C32180FAB900A72F68 /* Category.swift */; };
+		C49B44C62180FB5800A72F68 /* SubCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44C52180FB5800A72F68 /* SubCategory.swift */; };
+		C49B44C82180FBA200A72F68 /* ResponseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44C72180FBA200A72F68 /* ResponseHelper.swift */; };
+		C49B44CA2180FC2B00A72F68 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44C92180FC2B00A72F68 /* CategoriesService.swift */; };
+		C49B44CC2180FDD800A72F68 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44CB2180FDD800A72F68 /* Venue.swift */; };
+		C49B44CE2181002000A72F68 /* VenueLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44CD2181002000A72F68 /* VenueLocation.swift */; };
+		C49B44D02181012E00A72F68 /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44CF2181012E00A72F68 /* VenuesViewModel.swift */; };
+		C49B44D32181019D00A72F68 /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49B44D12181019D00A72F68 /* VenueCell.xib */; };
+		C49B44D42181019D00A72F68 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44D22181019D00A72F68 /* VenueCell.swift */; };
+		C49B44D62181025E00A72F68 /* VenueCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44D52181025E00A72F68 /* VenueCellViewModel.swift */; };
+		C49B44D92181030A00A72F68 /* VenuePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44D82181030A00A72F68 /* VenuePhoto.swift */; };
+		C49B44DB218121F100A72F68 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B44DA218121F100A72F68 /* LocationAnnotation.swift */; };
 		D69B0D75217C2E3400AB39EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D74217C2E3400AB39EA /* AppDelegate.swift */; };
-		D69B0D77217C2E3400AB39EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D76217C2E3400AB39EA /* ViewController.swift */; };
-		D69B0D7A217C2E3400AB39EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69B0D78217C2E3400AB39EA /* Main.storyboard */; };
 		D69B0D7C217C2E3600AB39EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69B0D7B217C2E3600AB39EA /* Assets.xcassets */; };
 		D69B0D7F217C2E3600AB39EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69B0D7D217C2E3600AB39EA /* LaunchScreen.storyboard */; };
 		D69B0D8A217C2E3600AB39EA /* pruebaHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D89217C2E3600AB39EA /* pruebaHeroTests.swift */; };
 		D69B0D96217C2E7100AB39EA /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D95217C2E7100AB39EA /* LocationService.swift */; };
-		D69B0D98217CCACE00AB39EA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D97217CCACE00AB39EA /* NetworkService.swift */; };
-		D69B0D9A21801E3000AB39EA /* Navegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D9921801E3000AB39EA /* Navegation.swift */; };
+		D69B0D9A21801E3000AB39EA /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D9921801E3000AB39EA /* Navigation.swift */; };
 		D69B0D9C21801F8000AB39EA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B0D9B21801F8000AB39EA /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +46,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C49B44B22180C98F00A72F68 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C49B44B62180CAC400A72F68 /* Table.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
+		C49B44B82180CAEE00A72F68 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C49B44BA2180CB2300A72F68 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		C49B44BC2180CB3400A72F68 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C49B44BE2180EFCA00A72F68 /* RuntimeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		C49B44C02180F87500A72F68 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C49B44C32180FAB900A72F68 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C49B44C52180FB5800A72F68 /* SubCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategory.swift; sourceTree = "<group>"; };
+		C49B44C72180FBA200A72F68 /* ResponseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHelper.swift; sourceTree = "<group>"; };
+		C49B44C92180FC2B00A72F68 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		C49B44CB2180FDD800A72F68 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		C49B44CD2181002000A72F68 /* VenueLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueLocation.swift; sourceTree = "<group>"; };
+		C49B44CF2181012E00A72F68 /* VenuesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
+		C49B44D12181019D00A72F68 /* VenueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
+		C49B44D22181019D00A72F68 /* VenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		C49B44D52181025E00A72F68 /* VenueCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCellViewModel.swift; sourceTree = "<group>"; };
+		C49B44D82181030A00A72F68 /* VenuePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuePhoto.swift; sourceTree = "<group>"; };
+		C49B44DA218121F100A72F68 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
 		D69B0D71217C2E3400AB39EA /* pruebaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69B0D74217C2E3400AB39EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D69B0D76217C2E3400AB39EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D69B0D79217C2E3400AB39EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D69B0D7B217C2E3600AB39EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69B0D7E217C2E3600AB39EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D69B0D80217C2E3600AB39EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,8 +74,7 @@
 		D69B0D89217C2E3600AB39EA /* pruebaHeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaHeroTests.swift; sourceTree = "<group>"; };
 		D69B0D8B217C2E3600AB39EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D69B0D95217C2E7100AB39EA /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		D69B0D97217CCACE00AB39EA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		D69B0D9921801E3000AB39EA /* Navegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navegation.swift; sourceTree = "<group>"; };
+		D69B0D9921801E3000AB39EA /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		D69B0D9B21801F8000AB39EA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +96,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C49B44B42180CAA300A72F68 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				C49B44B62180CAC400A72F68 /* Table.storyboard */,
+				C49B44B82180CAEE00A72F68 /* TableViewController.swift */,
+				C49B44CF2181012E00A72F68 /* VenuesViewModel.swift */,
+				C49B44D72181026600A72F68 /* VenueCell */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		C49B44B52180CAB200A72F68 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C49B44BA2180CB2300A72F68 /* Map.storyboard */,
+				C49B44BC2180CB3400A72F68 /* MapViewController.swift */,
+				C49B44DA218121F100A72F68 /* LocationAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C49B44C22180FA8D00A72F68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C49B44C32180FAB900A72F68 /* Category.swift */,
+				C49B44C52180FB5800A72F68 /* SubCategory.swift */,
+				C49B44C72180FBA200A72F68 /* ResponseHelper.swift */,
+				C49B44CB2180FDD800A72F68 /* Venue.swift */,
+				C49B44CD2181002000A72F68 /* VenueLocation.swift */,
+				C49B44D82181030A00A72F68 /* VenuePhoto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C49B44D72181026600A72F68 /* VenueCell */ = {
+			isa = PBXGroup;
+			children = (
+				C49B44D22181019D00A72F68 /* VenueCell.swift */,
+				C49B44D12181019D00A72F68 /* VenueCell.xib */,
+				C49B44D52181025E00A72F68 /* VenueCellViewModel.swift */,
+			);
+			path = VenueCell;
+			sourceTree = "<group>";
+		};
 		D69B0D68217C2E3400AB39EA = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +161,15 @@
 		D69B0D73217C2E3400AB39EA /* pruebaHero */ = {
 			isa = PBXGroup;
 			children = (
+				C49B44B52180CAB200A72F68 /* Map */,
+				C49B44B42180CAA300A72F68 /* Table */,
 				D69B0D94217C2E5500AB39EA /* Services */,
+				C49B44C22180FA8D00A72F68 /* Models */,
 				D69B0D74217C2E3400AB39EA /* AppDelegate.swift */,
-				D69B0D76217C2E3400AB39EA /* ViewController.swift */,
-				D69B0D78217C2E3400AB39EA /* Main.storyboard */,
 				D69B0D7B217C2E3600AB39EA /* Assets.xcassets */,
 				D69B0D7D217C2E3600AB39EA /* LaunchScreen.storyboard */,
 				D69B0D80217C2E3600AB39EA /* Info.plist */,
-				D69B0D9921801E3000AB39EA /* Navegation.swift */,
+				D69B0D9921801E3000AB39EA /* Navigation.swift */,
 				D69B0D9B21801F8000AB39EA /* TabBarViewController.swift */,
 			);
 			path = pruebaHero;
@@ -111,7 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				D69B0D95217C2E7100AB39EA /* LocationService.swift */,
-				D69B0D97217CCACE00AB39EA /* NetworkService.swift */,
+				C49B44B22180C98F00A72F68 /* Theme.swift */,
+				C49B44BE2180EFCA00A72F68 /* RuntimeError.swift */,
+				C49B44C02180F87500A72F68 /* NetworkService.swift */,
+				C49B44C92180FC2B00A72F68 /* CategoriesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,8 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69B0D7F217C2E3600AB39EA /* LaunchScreen.storyboard in Resources */,
+				C49B44D32181019D00A72F68 /* VenueCell.xib in Resources */,
 				D69B0D7C217C2E3600AB39EA /* Assets.xcassets in Resources */,
-				D69B0D7A217C2E3400AB39EA /* Main.storyboard in Resources */,
+				C49B44BB2180CB2300A72F68 /* Map.storyboard in Resources */,
+				C49B44B72180CAC400A72F68 /* Table.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,12 +299,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69B0D77217C2E3400AB39EA /* ViewController.swift in Sources */,
+				C49B44CE2181002000A72F68 /* VenueLocation.swift in Sources */,
 				D69B0D96217C2E7100AB39EA /* LocationService.swift in Sources */,
-				D69B0D98217CCACE00AB39EA /* NetworkService.swift in Sources */,
+				C49B44D02181012E00A72F68 /* VenuesViewModel.swift in Sources */,
+				C49B44B92180CAEE00A72F68 /* TableViewController.swift in Sources */,
 				D69B0D75217C2E3400AB39EA /* AppDelegate.swift in Sources */,
+				C49B44CC2180FDD800A72F68 /* Venue.swift in Sources */,
+				C49B44C42180FAB900A72F68 /* Category.swift in Sources */,
+				C49B44C62180FB5800A72F68 /* SubCategory.swift in Sources */,
+				C49B44BF2180EFCA00A72F68 /* RuntimeError.swift in Sources */,
+				C49B44C82180FBA200A72F68 /* ResponseHelper.swift in Sources */,
+				C49B44D42181019D00A72F68 /* VenueCell.swift in Sources */,
+				C49B44C12180F87500A72F68 /* NetworkService.swift in Sources */,
+				C49B44B32180C98F00A72F68 /* Theme.swift in Sources */,
 				D69B0D9C21801F8000AB39EA /* TabBarViewController.swift in Sources */,
-				D69B0D9A21801E3000AB39EA /* Navegation.swift in Sources */,
+				C49B44D92181030A00A72F68 /* VenuePhoto.swift in Sources */,
+				C49B44CA2180FC2B00A72F68 /* CategoriesService.swift in Sources */,
+				D69B0D9A21801E3000AB39EA /* Navigation.swift in Sources */,
+				C49B44D62181025E00A72F68 /* VenueCellViewModel.swift in Sources */,
+				C49B44BD2180CB3400A72F68 /* MapViewController.swift in Sources */,
+				C49B44DB218121F100A72F68 /* LocationAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D69B0D78217C2E3400AB39EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D69B0D79217C2E3400AB39EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D69B0D7D217C2E3600AB39EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -387,7 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6AFWAWALQ;
 				INFOPLIST_FILE = pruebaHero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,7 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6AFWAWALQ;
 				INFOPLIST_FILE = pruebaHero/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

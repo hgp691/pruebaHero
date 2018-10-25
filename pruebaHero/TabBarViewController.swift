@@ -15,8 +15,24 @@ class TabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         
-        self.tabBar.backgroundColor = .red
+        print("ViewDid load tabbar")
         
+        self.tabBar.barTintColor = Theme.mainColor
+        self.tabBar.tintColor = .white
+        
+        if #available(iOS 10.0, *) {
+            self.tabBar.unselectedItemTintColor = Theme.secondaryColor
+        } else {
+            // Fallback on earlier versions
+            
+        }
+    }
+    
+    func configureNavigation(viewControllers: [UINavigationController],icons: [UIImage], names: [String]){
+        self.viewControllers = viewControllers
+        for i in 0...(self.viewControllers?.count)! - 1{
+            self.viewControllers?[i].tabBarItem = UITabBarItem(title: names[i], image: icons[i], selectedImage: icons[i])
+        }
     }
     
 
