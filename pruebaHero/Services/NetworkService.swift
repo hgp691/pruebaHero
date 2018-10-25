@@ -109,6 +109,62 @@ class NetworkService{
         
     }
     
+    //MARK: LOAD VENUES
+    static func searchVenuesByCategory(categoryId: String,completion: @escaping (Error?,[Venue])->Void){
+        
+        var urlComponents = URLComponents(string: "https://api.foursquare.com/v2/venues/search")
+        
+        let stringLocation = LocationService.shared.getCoordinateAsString()
+        
+        print("Load venues of \(stringLocation)")
+        
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "client_id", value: "L5IVTR5VX30JSL0U42XWNHUHMAVPPJCOEJBQ1CRF0B1BAPCK"),
+            URLQueryItem(name: "client_secret", value: "OAXWRFI2AWTVFCHN3HKYWKRW3DF5DW2OL12GE4BRANQQSZ5K"),
+            URLQueryItem(name: "v", value: "20180323"),
+            URLQueryItem(name: "ll", value: stringLocation),
+            URLQueryItem(name: "limit", value: "30"),
+            URLQueryItem(name: "radius", value: "200"),
+            URLQueryItem(name: "categoryId", value: categoryId)
+        ]
+        
+        let request = URLRequest(url: urlComponents!.url!)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: request) { (data, response, error) in
+            
+            do{
+                
+                if let loadError = error{
+                    throw loadError
+                }
+                
+                guard let data = data else{
+                    throw RuntimeError("Error loading venues")
+                }
+                
+                
+                
+                ////print(String(data: data, encoding: String.Encoding.utf8))
+                
+                let decoder = JSONDecoder()
+                let helper = try decoder.decode(ResponseHelperVenue.self, from: data)
+                print("Venues a pintar: \(helper.venues.count)")
+                completion(nil, helper.venues)
+                
+                
+            }catch{
+                completion(error, [])
+            }
+            
+        }
+        
+        task.resume()
+        
+    }
+    
     //MARK: LOAD VENUEPHOTOS BY VENUE ID
     static func loadVenuesPhotosByID(venue_id: String, completion: @escaping ([VenuePhoto]?)->Void){
         

@@ -31,7 +31,7 @@ class TableViewController: UIViewController {
         
         self.title = "List"
 
-        
+        self.configureRightButton()
  
     }
     
@@ -78,7 +78,6 @@ extension TableViewController: UITableViewDelegate{
 }
 
 //MARK: LOCATION NOTIFICATIONS
-
 extension TableViewController{
     
     @objc func firstUpdateLocation(notification: Notification){
@@ -95,11 +94,35 @@ extension TableViewController{
         })
         
     }
-    
 }
 
-
-
+//MARK: CATEGORY SEARCH
+extension TableViewController: CategorySelectorDelegate{
+    
+    override func rightButtonClicked() {
+        self.showSelector()
+    }
+    
+    func showSelector(){
+        let selector = UIStoryboard(name: "CategorySelector", bundle: nil).instantiateViewController(withIdentifier: "CategorySelector") as? CategorySelector
+        selector?.delegate = self
+        self.definesPresentationContext = true
+        selector?.modalPresentationStyle = .fullScreen
+        self.present(selector!, animated: true, completion: nil)
+    }
+    
+    func CategorySelectorReturnCategoryID(selector: CategorySelector, Id: String) {
+        self.venuesViewModel?.searchVenuesByCategoryId(categoryId: Id, completion: {[weak self] (error) in
+            if error == nil{
+                DispatchQueue.main.async {
+                    if (self?.venuesViewModel?.venues.count)! > 0{
+                        self?.table.reloadData()
+                    }
+                }
+            }
+        })
+    }
+}
 
 //MARK: LOCATION NOTIFICATIONS
 extension UIViewController{

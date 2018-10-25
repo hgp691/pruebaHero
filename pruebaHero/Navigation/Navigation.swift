@@ -41,6 +41,7 @@ class Navigation{
         
         let TableNC = UINavigationController(rootViewController: TableVC!)
         TableNC.configureVisualNavBar()
+        TableNC.configureRightButton()
         self.tabController?.configureNavigation(viewControllers: [TableNC,MapNC], icons: [UIImage(named: "list")!,UIImage(named: "Map")!], names: ["List","Map"])
         self.window?.rootViewController = self.tabController!
         self.window?.makeKeyAndVisible()
@@ -50,6 +51,7 @@ class Navigation{
 }
 
 extension UINavigationController{
+    
     func configureVisualNavBar(){
         self.navigationBar.barTintColor = Theme.mainColor
         if #available(iOS 11.0, *) {
@@ -60,6 +62,7 @@ extension UINavigationController{
         }
         self.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
+    
 }
 
 extension UIViewController{
@@ -69,6 +72,17 @@ extension UIViewController{
         let ok = UIAlertAction(title: "Ok", style: .default, handler: okCompletion)
         alertController.addAction(ok)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func configureRightButton(){
+        let button = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(self.rightButtonClicked))
+        
+        self.navigationItem.rightBarButtonItem = button
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
+    }
+    
+    @objc func rightButtonClicked(){
+        print("Right button clicked")
     }
     
 }

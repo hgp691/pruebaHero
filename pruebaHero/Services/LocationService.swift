@@ -52,6 +52,9 @@ class LocationService: NSObject{
         return (self.lastLocation?.distance(from: coord))!
     }
     
+    func mockLastLocation(lat: Double, lng: Double){
+        self.lastLocation = CLLocation(latitude: lat, longitude: lng)
+    }
 }
 
 

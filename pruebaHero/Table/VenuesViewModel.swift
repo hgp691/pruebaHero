@@ -36,4 +36,20 @@ class VenuesViewModel{
         return VenueCellViewModel(venue: self.venues[indexPath.row])
     }
     
+    func searchVenuesByCategoryId(categoryId: String, completion: @escaping (Error?)->Void){
+        
+        NetworkService.searchVenuesByCategory(categoryId: categoryId) {[weak self] (error, venuesReturned) in
+            if error != nil{
+                completion(error)
+            }else{
+                
+                print("Se obtuvieron \(venuesReturned.count)")
+                
+                self?.venues = venuesReturned
+                completion(nil)
+            }
+        }
+        
+    }
+    
 }
