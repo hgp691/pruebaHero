@@ -20,9 +20,9 @@ class NetworkService{
         var urlComponents = URLComponents(string: urlString)
         
         urlComponents?.queryItems = [
-            URLQueryItem(name: "client_id", value: "L5IVTR5VX30JSL0U42XWNHUHMAVPPJCOEJBQ1CRF0B1BAPCK"),
-            URLQueryItem(name: "client_secret", value: "OAXWRFI2AWTVFCHN3HKYWKRW3DF5DW2OL12GE4BRANQQSZ5K"),
-            URLQueryItem(name: "v", value: "20180323")
+            URLQueryItem(name: "client_id", value: Credentials.Client_Id),
+            URLQueryItem(name: "client_secret", value: Credentials.Client_Secret),
+            URLQueryItem(name: "v", value: Credentials.Version)
         ]
         
         let request = URLRequest(url: urlComponents!.url!)
@@ -64,9 +64,9 @@ class NetworkService{
         print("Load venues of \(stringLocation)")
         
         urlComponents?.queryItems = [
-            URLQueryItem(name: "client_id", value: "L5IVTR5VX30JSL0U42XWNHUHMAVPPJCOEJBQ1CRF0B1BAPCK"),
-            URLQueryItem(name: "client_secret", value: "OAXWRFI2AWTVFCHN3HKYWKRW3DF5DW2OL12GE4BRANQQSZ5K"),
-            URLQueryItem(name: "v", value: "20180323"),
+            URLQueryItem(name: "client_id", value: Credentials.Client_Id),
+            URLQueryItem(name: "client_secret", value: Credentials.Client_Secret),
+            URLQueryItem(name: "v", value: Credentials.Version),
             URLQueryItem(name: "ll", value: stringLocation),
             URLQueryItem(name: "limit", value: "30"),
             URLQueryItem(name: "radius", value: "200")
@@ -119,9 +119,9 @@ class NetworkService{
         print("Load venues of \(stringLocation)")
         
         urlComponents?.queryItems = [
-            URLQueryItem(name: "client_id", value: "L5IVTR5VX30JSL0U42XWNHUHMAVPPJCOEJBQ1CRF0B1BAPCK"),
-            URLQueryItem(name: "client_secret", value: "OAXWRFI2AWTVFCHN3HKYWKRW3DF5DW2OL12GE4BRANQQSZ5K"),
-            URLQueryItem(name: "v", value: "20180323"),
+            URLQueryItem(name: "client_id", value: Credentials.Client_Id),
+            URLQueryItem(name: "client_secret", value: Credentials.Client_Secret),
+            URLQueryItem(name: "v", value: Credentials.Version),
             URLQueryItem(name: "ll", value: stringLocation),
             URLQueryItem(name: "limit", value: "30"),
             URLQueryItem(name: "radius", value: "200"),
@@ -173,9 +173,9 @@ class NetworkService{
         var urlComponents = URLComponents(string: urlString)
         
         urlComponents?.queryItems = [
-            URLQueryItem(name: "client_id", value: "L5IVTR5VX30JSL0U42XWNHUHMAVPPJCOEJBQ1CRF0B1BAPCK"),
-            URLQueryItem(name: "client_secret", value: "OAXWRFI2AWTVFCHN3HKYWKRW3DF5DW2OL12GE4BRANQQSZ5K"),
-            URLQueryItem(name: "v", value: "20180323")
+            URLQueryItem(name: "client_id", value: Credentials.Client_Id),
+            URLQueryItem(name: "client_secret", value: Credentials.Client_Secret),
+            URLQueryItem(name: "v", value: Credentials.Version)
         ]
         
         let request = URLRequest(url: urlComponents!.url!)
